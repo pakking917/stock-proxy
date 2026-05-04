@@ -3,7 +3,8 @@ export default async function handler(req, res) {
 
   const API_KEY = process.env.STOCK_API_KEY;
 
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&apikey=${API_KEY}`;
+  // const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&apikey=${API_KEY}`;
+  const url = `https://eodhd.com/api/real-time/${ticker}.US?api_token=${API_KEY}&fmt=json`
 
   try {
     const response = await fetch(url);
