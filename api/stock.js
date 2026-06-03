@@ -2,14 +2,13 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
 
-  console.log(req.query);
 
   const { ticker, target } = req.query;
 
   const API_KEY = process.env.STOCK_API_KEY;
 
-  console.log(ticker);
-  console.log(target);
+
+
 
   // EODHD
   if (ticker === 'history') {
