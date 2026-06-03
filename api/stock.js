@@ -4,8 +4,7 @@ export default async function handler(req, res) {
 
   console.log(req.query);
 
-  const { ticker } = req.query;
-  const { target } = req.query;
+  const { ticker, target } = req.query;
 
   const API_KEY = process.env.STOCK_API_KEY;
 
