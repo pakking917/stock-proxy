@@ -8,7 +8,8 @@ export default async function handler(req, res) {
 
   const API_KEY = process.env.STOCK_API_KEY;
 
-  // const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${ticker}&interval=5min&apikey=${API_KEY}`;
+  console.log(ticker);
+  console.log(target);
 
   // EODHD
   if (ticker = 'history') {
