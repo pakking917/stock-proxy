@@ -17,6 +17,9 @@ export default async function handler(req, res) {
   else if (ticker === 'current') {
     const url = `https://eodhd.com/api/real-time/${ticker}.US?api_token=${API_KEY}&fmt=json`;
   }
+  else {
+    return res.status(400).json({ error: "Invalid target." });
+  }
 
   try {
     const response = await fetch(url);
