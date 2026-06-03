@@ -13,12 +13,11 @@ export default async function handler(req, res) {
   console.log(target);
 
   // EODHD
-  if (ticker = 'history') {
+  if (ticker === 'history') {
     const url = `https://eodhd.com/api/eod/${ticker}.US?api_token=${API_KEY}&fmt=json`;
   }
-  else if (ticker = 'current') {
+  else if (ticker === 'current') {
     const url = `https://eodhd.com/api/real-time/${ticker}.US?api_token=${API_KEY}&fmt=json`;
-
   }
 
   try {
