@@ -7,15 +7,15 @@ export default async function handler(req, res) {
 
   const API_KEY = process.env.STOCK_API_KEY;
 
-
+  let url;
 
 
   // EODHD
-  if (ticker === 'history') {
-    const url = `https://eodhd.com/api/eod/${ticker}.US?api_token=${API_KEY}&fmt=json`;
+  if (target === 'history') {
+    url = `https://eodhd.com/api/eod/${ticker}.US?api_token=${API_KEY}&fmt=json`;
   }
-  else if (ticker === 'current') {
-    const url = `https://eodhd.com/api/real-time/${ticker}.US?api_token=${API_KEY}&fmt=json`;
+  else if (target === 'current') {
+    url = `https://eodhd.com/api/real-time/${ticker}.US?api_token=${API_KEY}&fmt=json`;
   }
   else {
     return res.status(400).json({ error: "Invalid target." });
